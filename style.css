@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@font-face {
+    font-family: 'Swift';
+    src: url('./lettertypes/get-schwifty.woff') format('woff');
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,6 +12,13 @@
     font-family: 'Roboto', sans-serif;
 
     transition: all 0.1s ease;
+}
+
+*::selection {
+    color: #FF9800;
+    background: #202329;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke: #202329;
 }
 
 body {
@@ -74,4 +86,23 @@ nav a:hover {
 
 section h1 {
     position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 20%;
+    color: #282B32;
+    font-family: Swift;
+    font-size: 6.9rem;
+    user-select: none;
+}
+
+.showcase {
+    width: 90vw;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    /* background: #30333b; */
 }
