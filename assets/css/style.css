@@ -144,3 +144,36 @@ img {
 .hsvg:hover svg {
     fill: #F19D38;
 }
+
+.card1:hover img, .card2:hover img, .card3:hover img{
+    filter: grayscale(0%);
+}
+
+.card1:hover, .card2:hover, .card3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover h2 {
+    color: #fff;
+}
+
+.card img, .card a {
+    -webkit-user-drag: none;
+    text-decoration: none;
+}
+
+.card h2 {
+    color: #ccc;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.cardContentWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
