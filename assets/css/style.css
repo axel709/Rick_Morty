@@ -20,8 +20,6 @@ html {
 *::selection {
     color: #FF9800;
     background: #202329;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke: #202329;
 }
 
 body {
@@ -176,4 +174,55 @@ img {
     align-items: center;
     width: 100%;
     height: 100%;
+}
+
+footer {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    position: relative;
+    background: rgb(32, 35, 41);
+    color: #9E9E9E;
+    min-height: calc(120px);
+    width: 100%;
+    text-transform: uppercase;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    list-style: none;
+    margin: 0px 1.5rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #9E9E9E;
+    font-size: 1rem;
+}
+
+footer a:hover {
+    color: #FF9800;
+}
+
+.statusA {
+    padding-top: 20px;
+}
+
+.statusText, .statusIcon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.statusIcon {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: rgb(85, 204, 68);
+    margin-left: 0.5rem;
 }
