@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Swift';
-    src: url('./lettertypes/get-schwifty.woff') format('woff');
+    src: url('../lettertypes/get-schwifty.woff') format('woff');
 }
 
 * {
