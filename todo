@@ -2,3 +2,4 @@ TODO: Responsiveness
 TODO: Fetch characters, episodes and locations
 TODO: Make a display for the characters, episodes and locations
 TODO: Make sure it first loads 10 characters/episodes or locations and when you are almost scrolled to bottom it will generate more. (Maybe create multiple pages so you can click on 'next page' at the bottom)
+TODO: Fix title and icon
