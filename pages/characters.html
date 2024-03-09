@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rick and Morty Characters</title>
     <link rel="stylesheet" href="../assets/css/nav.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/characters.css">
+    <link rel="icon" href="../assets/icon/icon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -22,6 +24,33 @@
         </nav>
     </header>
 
+    <main>
+        <section>
+            <div class="showcase">
+                <template>
+                    <article class="card">
+                        <div class="img-container">
+                            <img src="" alt="">
+                        </div>
+                        <div class="card-info">
+                            <div class="section sec1">
+                                <a href="#"><h2>Placeholder Name</h2></a>
+                                <span class="status"><span class="status-icon" id="statusIcon"></span> Unknown - Human</span>
+                            </div>
+                            <div class="section sec2">
+                                <span>Last known location:</span>
+                                <a href="#">Placeholder last location</a>
+                            </div>
+                            <div class="section sec3">
+                                <span>First seen in:</span>
+                                <a href="#">Placeholder first location</a>
+                            </div>
+                        </div>
+                    </article>
+                </template>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <ul>
@@ -48,5 +77,6 @@
     </footer>
 
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/character.js"></script>
 </body>
 </html>
