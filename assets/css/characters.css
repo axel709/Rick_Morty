@@ -1,4 +1,20 @@
 section {
+    position: relative;
+    z-index: 2;
+}
+
+section h1 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 20%;
+    color: #282B32;
+    font-family: Swift;
+    font-size: 6.9rem;
+    user-select: none;
+}
+
+.sectionB {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,4 +120,8 @@ article {
     font-family: Helvetica, sans-serif;
     font-size: 1.15rem;
     font-weight: 200;
+}
+
+.hover:hover {
+    color: #F19D38;
 }
