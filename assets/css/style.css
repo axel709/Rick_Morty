@@ -117,3 +117,21 @@ main {
     z-index: 0;
     fill: #37393f;
 }
+
+@media screen and (max-width: 768px) {
+    .showcase {
+        flex-direction: column;
+        align-items: center;
+        width: 95vw;
+    }
+
+    .card1, .card2, .card3 {
+        width: 90vw;
+        margin: 0.75rem 0 0.75rem 0;
+    }
+
+    .cardImgWrapper {
+        width: 90vw;
+        height: 90vw;
+    }
+}
