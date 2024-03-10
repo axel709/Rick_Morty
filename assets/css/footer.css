@@ -50,6 +50,10 @@ footer a:hover {
 }
 
 @media screen and (max-width: 768px) {
+    footer {
+        width: 100%;
+    }
+
     footer ul {
         flex-direction: column;
         text-align: center;
