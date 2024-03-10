@@ -37,8 +37,12 @@ section h1 {
 
 article {
     background: rgb(60, 62, 68);
-    width: 600px;
-    height: 220px;
+    /* width: 600px;
+    height: 220px; */
+
+    width: 500px;
+    height: 200px;
+
     display: flex;
     overflow: hidden;
     border-radius: 0.5rem;
@@ -124,4 +128,21 @@ article {
 
 .hover:hover {
     color: #F19D38;
+}
+
+@media screen and (max-width: 768px) {
+    .showcase {
+        flex-direction: column;
+        width: 95vw;
+    }
+
+    article {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+    }
+
+    .card-info div {
+        margin: 0.5rem 0 0.5rem 0
+    }
 }
