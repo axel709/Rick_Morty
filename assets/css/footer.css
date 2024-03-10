@@ -48,3 +48,10 @@ footer a:hover {
     background: rgb(85, 204, 68);
     margin-left: 0.5rem;
 }
+
+@media screen and (max-width: 768px) {
+    footer ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}

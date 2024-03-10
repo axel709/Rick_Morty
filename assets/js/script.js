@@ -33,3 +33,9 @@ fetchData(episodeUrl)
     .then((data) => {
         document.getElementById('episode-count').textContent = "Episodes: " + data.info.count;
     });
+
+
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-menu').classList.toggle('active');
+});
+    
