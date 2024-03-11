@@ -80,6 +80,7 @@ function updateUrl() {
 
 function generatePaginationButtons() {
     const paginationContainer = document.querySelector('.pagination');
+    const paginationButtons = paginationContainer.querySelectorAll('button');
     paginationContainer.innerHTML = '';
 
     const startPage = Math.max(1, currentPage - 2);
@@ -96,6 +97,12 @@ function generatePaginationButtons() {
     if (currentPage < totalPages) {
         paginationContainer.innerHTML += `<button onclick="handlePaginationClick(${currentPage + 1})">Next</button>`;
     }
+
+    paginationButtons.forEach(button => {
+        if (button.textContent === currentPage.toString()) {
+            button.style.backgroundColor = '#F19D38';
+        }
+    });
 }
 
 generatePaginationButtons();
