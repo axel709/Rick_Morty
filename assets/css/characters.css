@@ -18,7 +18,7 @@ section h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4rem 0px;
+    padding: 4rem 0 0 0;
     color: white;
 }
 
@@ -130,6 +130,33 @@ article {
     color: #F19D38;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.pagination button {
+    background: #3C3E44;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.pagination button:active {
+    background: #F19D38;
+}
+
+.pagination button:hover {
+    background: #F19D38;
+
+}
+
 @media screen and (max-width: 768px) {
     .showcase {
         flex-direction: column;
@@ -144,5 +171,13 @@ article {
 
     .card-info div {
         margin: 0.5rem 0 0.5rem 0
+    }
+
+    .pagination {
+        margin: 1rem 0;
+    }
+
+    .pagination button {
+        padding: 0.5rem 0.75rem;
     }
 }
