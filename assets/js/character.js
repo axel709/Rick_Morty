@@ -1,11 +1,10 @@
 const urlParams = new URLSearchParams(window.location.search);
-const currentPage = parseInt(urlParams.get('page')) || 1;
+let currentPage = parseInt(urlParams.get('page')) || 1;
 const characterUrl2 = `https://rickandmortyapi.com/api/character?page=${currentPage}`;
 const totalPages = 42;
 
 
 if (currentPage < 1 || currentPage > totalPages) {
-
     window.location.href = '404.html';
 }
 
@@ -62,3 +61,18 @@ fetch(characterUrl2)
     .catch(error => {
         console.error('There was a problem fetching the data:', error);
     });
+
+function handlePaginationClick(pageNum) {
+    if (pageNum < 1 || pageNum > totalPages) {
+        return;
+    }
+    
+    currentPage = pageNum;
+    updateUrl();
+}
+
+function updateUrl() {
+    const newUrl = window.location.pathname + '?page=' + currentPage;
+    window.history.pushState({ path: newUrl }, '', newUrl);
+    window.location.reload();
+}
