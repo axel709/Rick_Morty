@@ -75,4 +75,27 @@ function updateUrl() {
     const newUrl = window.location.pathname + '?page=' + currentPage;
     window.history.pushState({ path: newUrl }, '', newUrl);
     window.location.reload();
+    generatePaginationButtons();
 }
+
+function generatePaginationButtons() {
+    const paginationContainer = document.querySelector('.pagination');
+    paginationContainer.innerHTML = '';
+
+    const startPage = Math.max(1, currentPage - 2);
+    const endPage = Math.min(totalPages, currentPage + 2);
+
+    if (currentPage > 1) {
+        paginationContainer.innerHTML += `<button onclick="handlePaginationClick(${currentPage - 1})">Previous</button>`;
+    }
+
+    for (let page = startPage; page <= endPage; page++) {
+        paginationContainer.innerHTML += `<button ${page === currentPage ? 'class="active"' : ''} onclick="handlePaginationClick(${page})">${page}</button>`;
+    }
+
+    if (currentPage < totalPages) {
+        paginationContainer.innerHTML += `<button onclick="handlePaginationClick(${currentPage + 1})">Next</button>`;
+    }
+}
+
+generatePaginationButtons();
