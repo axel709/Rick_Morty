@@ -1,0 +1,35 @@
+.rnm {
+    position: relative;
+    z-index: 2;
+}
+
+.rnm h1 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 20%;
+    color: #282B32;
+    font-family: Swift;
+    font-size: 6.9rem;
+    user-select: none;
+}
+
+.notFound {
+    width: 100vw;
+    height: 20vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .notFound {
+        height: 58vh;
+    }
+}
