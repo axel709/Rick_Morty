@@ -156,6 +156,11 @@ article {
     background: transparent;
 }
 
+.sec1 button {
+    border: none;
+    background: transparent;
+}
+
 .pagination button:active {
     background: #F19D38;
 }

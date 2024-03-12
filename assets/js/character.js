@@ -27,7 +27,7 @@ fetch(characterUrl2)
             img.src = character.image;
             img.alt = character.name;
 
-            const name = clone.querySelector('.section.sec1 a h2');
+            const name = clone.querySelector('.section.sec1 button h2');
             name.textContent = character.name;
 
             const status = clone.querySelector('.status');
@@ -110,6 +110,14 @@ generatePaginationButtons();
 
 function popChar(button) {
     const img = button.querySelector('img');
+    const characterUrl = new URL(img.src);
+    const id = characterUrl.pathname.split('/').pop().replace('.jpeg', '');
+    console.log(`You clicked on ${id}`);
+}
+
+function popCharacter(button) {
+    const card = button.parentElement.parentElement.parentElement;
+    const img = card.querySelector('img');
     const characterUrl = new URL(img.src);
     const id = characterUrl.pathname.split('/').pop().replace('.jpeg', '');
     console.log(`You clicked on ${id}`);
