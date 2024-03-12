@@ -107,3 +107,10 @@ function generatePaginationButtons() {
 }
 
 generatePaginationButtons();
+
+function popChar(button) {
+    const img = button.querySelector('img');
+    const characterUrl = new URL(img.src);
+    const id = characterUrl.pathname.split('/').pop().replace('.jpeg', '');
+    console.log(`You clicked on ${id}`);
+}

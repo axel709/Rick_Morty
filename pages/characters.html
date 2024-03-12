@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the world of Rick and Morty with a wide range of characters, episodes, and locations.">
+    <meta name="keywords" content="Rick and Morty, characters, episodes, locations">
+    <meta name="author" content="Spaceman4">
+    <link rel="manifest" href="../assets/manifest/manifest.json">
+    <meta property="og:title" content="Rick and Morty Characters, Episodes, and Locations">
+    <meta property="og:description" content="Explore the world of Rick and Morty with a wide range of characters, episodes, and locations.">
+    <meta property="og:url" content="https://89801.stu.sd-lab.nl/RandM/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Rick and Morty">
+    <link rel="stylesheet" href="">
     <title>Rick and Morty Characters</title>
     <link rel="stylesheet" href="../assets/css/nav.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
@@ -43,7 +53,9 @@
                 <template>
                     <article class="card">
                         <div class="img-container">
-                            <img src="" alt="" loading="lazy">
+                            <button onclick="popChar(this)">
+                                <img src="" alt="" loading="lazy">
+                            </button>
                         </div>
                         <div class="card-info">
                             <div class="section sec1">

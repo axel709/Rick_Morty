@@ -1,0 +1,29 @@
+{
+    "name": "Rick & Morty",
+    "short_name": "R&M",
+    "description": "Rick & Morty characters",
+    "icons": [
+      {
+        "src": "/assets/icon/icon-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/assets/icon/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      },
+      {
+        "src": "/assets/icon/icon-256x256.png",
+        "type": "image/png",
+        "sizes": "256x256"
+      }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "theme_color": "#292B32",
+    "background_color": "#292B32",
+    "scope": "/",
+    "lang": "en"
+  }
+  
