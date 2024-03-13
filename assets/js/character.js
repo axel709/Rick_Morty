@@ -134,8 +134,11 @@ function popCharacter(button) {
     const img = card.querySelector('img');
     const characterUrl = new URL(img.src);
     const id = characterUrl.pathname.split('/').pop().replace('.jpeg', '');
+    const name = card.querySelector('h2').textContent;
+
     document.querySelector('.modal img').src = img.src;
     document.querySelector('.modal img').alt = img.alt;
+
     modal.showModal();
 }
 

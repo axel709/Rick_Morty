@@ -83,15 +83,30 @@
         </div>
 
         <dialog data-modal class="modal">
-            <div class="data">
+            <article class="card">
                 <div class="img-container">
-                    <img src="" alt="" loading="lazy">
+                    <button onclick="popChar(this)">
+                        <img src="" alt="" loading="lazy">
+                    </button>
                 </div>
-                <div class="info">
-                    <h1 class="Name">Placeholder Name</h1>
+                <div class="card-info">
+                    <div class="section sec1">
+                        <button onclick="popCharacter(this)">
+                            <h2 class="hover">Placeholder Name</h2>
+                        </button>
+                        <span class="status"><span class="status-icon" id="statusIcon"></span> Unknown - Human</span>
+                    </div>
+                    <div class="section sec2">
+                        <span>Last known location:</span>
+                        <a href="#" class="hover">Placeholder last location</a>
+                    </div>
+                    <div class="section sec3">
+                        <span>First seen in:</span>
+                        <a href="#" class="hover">Placeholder first location</a>
+                    </div>
                 </div>
-            </div>
-            <button class="closeModal" onclick="closeModalWindow()">CLOSE</button>
+                <button class="closeModal" onclick="closeModalWindow()">CLOSE</button>
+            </article>
         </dialog>
 
     </main>
