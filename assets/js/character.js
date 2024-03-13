@@ -110,6 +110,18 @@ function generatePaginationButtons() {
 
 generatePaginationButtons();
 
+modal.addEventListener('click', e => {
+    const dialogDimensions = modal.getBoundingClientRect();
+    if (
+        e.clientX < dialogDimensions.left ||
+        e.clientX > dialogDimensions.right ||
+        e.clientY < dialogDimensions.top ||
+        e.clientY > dialogDimensions.bottom
+    ) {
+        closeModalWindow();
+    }
+});
+
 function popChar(button) {
     const img = button.querySelector('img');
     const characterUrl = new URL(img.src);
