@@ -1,9 +1,9 @@
-section {
+.sectionS {
     position: relative;
     z-index: 2;
 }
 
-section h1 {
+.sectionS h1 {
     position: absolute;
     width: 100%;
     text-align: center;
@@ -167,6 +167,18 @@ article {
 
 .pagination button:hover {
     background: #F19D38;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 70vh;
+    background: #212329;
+    border-radius: 0.5rem;
+    border: none;
 }
 
 @media screen and (max-width: 768px) {

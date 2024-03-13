@@ -2,6 +2,8 @@ const urlParams = new URLSearchParams(window.location.search);
 let currentPage = parseInt(urlParams.get('page')) || 1;
 const characterUrl2 = `https://rickandmortyapi.com/api/character?page=${currentPage}`;
 const totalPages = 42;
+const modal = document.querySelector('.modal');
+const closeModal = document.querySelector('[data-modal]');
 
 
 if (currentPage < 1 || currentPage > totalPages) {
@@ -120,5 +122,11 @@ function popCharacter(button) {
     const img = card.querySelector('img');
     const characterUrl = new URL(img.src);
     const id = characterUrl.pathname.split('/').pop().replace('.jpeg', '');
-    console.log(`You clicked on ${id}`);
+    document.querySelector('.modal img').src = img.src;
+    document.querySelector('.modal img').alt = img.alt;
+    modal.showModal();
+}
+
+function closeModalWindow() {
+    modal.close();
 }
