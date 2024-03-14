@@ -81,33 +81,38 @@
             <button onclick="handlePaginationClick(currentPage - 1)">Previous</button>
             <button onclick="handlePaginationClick(currentPage + 1)">Next</button>
         </div>
-
         <dialog data-modal class="modal">
             <article class="card">
-                <div class="img-container">
-                    <button onclick="popChar(this)">
+                <div class="cool-container">
+                    <div class="cool-img-container">
                         <img src="" alt="" loading="lazy">
-                    </button>
+                    </div>
+                    <div class="cool-text-container">
+                        <div class="cool-character-info">
+                            <div class="cool-section cool-sec1">
+                                <h2 class="cool-hover" id="cool-name">Placeholder Name</h2>
+                                <span class="cool-status" id="cool-status"><span class="cool-status-icon" style="background-color: #d63d2e;"></span> status - species</span>
+                            </div>
+                            <div class="cool-section cool-sec2">
+                                <span>First seen in:</span>
+                                <a href="#" class="cool-hover" id="cool-first-seen">Placeholder first location</a>
+                            </div>
+                            <div class="cool-section cool-sec3">
+                                <span>Last known location:</span>
+                                <a href="#" class="cool-hover" id="cool-last-seen">Placeholder last location</a>
+                            </div>
+                        </div>
+                        <div class="cool-location-info"></div>
+                        <div class="cool-episode-info"></div>
+                    </div>
                 </div>
-                <div class="card-info">
-                    <div class="section sec1">
-                        <button onclick="popCharacter(this)">
-                            <h2 class="hover">Placeholder Name</h2>
-                        </button>
-                        <span class="status"><span class="status-icon" id="statusIcon"></span> Unknown - Human</span>
-                    </div>
-                    <div class="section sec2">
-                        <span>Last known location:</span>
-                        <a href="#" class="hover">Placeholder last location</a>
-                    </div>
-                    <div class="section sec3">
-                        <span>First seen in:</span>
-                        <a href="#" class="hover">Placeholder first location</a>
-                    </div>
-                </div>
+                <div class="cool-locations-container"></div>
+                <div class="cool-episodes-container"></div>
+                <div class="cool-date-created"></div>
                 <button class="closeModal" onclick="closeModalWindow()">CLOSE</button>
             </article>
         </dialog>
+        
 
     </main>
 

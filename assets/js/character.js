@@ -133,11 +133,26 @@ function popCharacter(button) {
     const card = button.parentElement.parentElement.parentElement;
     const img = card.querySelector('img');
     const characterUrl = new URL(img.src);
-    const id = characterUrl.pathname.split('/').pop().replace('.jpeg', '');
+    // const id = characterUrl.pathname.split('/').pop().replace('.jpeg', '');
     const name = card.querySelector('h2').textContent;
+    const status = card.querySelector('.status').innerHTML;
+    const firstSeen = card.querySelector('.sec3 a').textContent;
+    const lastSeen = card.querySelector('.sec2 a').textContent;
+
+    const modal = document.querySelector('.modal');
+    const modelName = document.getElementById('cool-name');
+    const coolStatus = document.getElementById('cool-status');
+    const firstSeenLocation = document.getElementById('cool-first-seen');
+    const lastSeenLocation = document.getElementById('cool-last-seen');
 
     document.querySelector('.modal img').src = img.src;
     document.querySelector('.modal img').alt = img.alt;
+
+    modelName.textContent = name;
+    coolStatus.innerHTML = status;
+    firstSeenLocation.textContent = firstSeen;
+    lastSeenLocation.textContent = lastSeen;
+
 
     modal.showModal();
 }
