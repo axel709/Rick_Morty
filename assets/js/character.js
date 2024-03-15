@@ -174,12 +174,19 @@ function popCharacter(button) {
             dateCreated.textContent = `Date created: ${formattedDate}`;
 
             data.episode.forEach(episode => {
-                const episodeID = episode.replace('https://rickandmortyapi.com/api/episode/', '');
-                const episodeP = document.createElement('p');
-
-                episodeP.textContent = `Episode ${episodeID}`;
-
-                coolEpisode.appendChild(episodeP);
+                fetch(episode)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        const textText = `Episode: ${data.episode} - ${data.name}`;
+                        const episodeP = document.createElement('p');
+                        episodeP.textContent = textText;
+                        coolEpisode.appendChild(episodeP);
+                    });
             });
         });
 

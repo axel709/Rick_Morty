@@ -298,7 +298,13 @@
     margin-left: 1rem;
     overflow: scroll;
     margin-top: 0.2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+
+.cool-episodes p {
+    color: #9E9E9E;
+    font-family: Helvetica, sans-serif;
+    font-size: 1rem;
 }
 
 .cool-date-created {
