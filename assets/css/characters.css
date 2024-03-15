@@ -231,14 +231,20 @@
 
 .modal .closeModal {
     width: 70%;
+    margin: 0.5rem auto;
     padding: 1rem;
-    margin: 0 0 1rem 0;
-    background: #F19D38;
+    background: transparent;
     color: #fff;
-    border: none;
+    border: 1px solid #F19D38;
     border-radius: 0.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.closeModal:hover {
+    border: 1px solid #F19D38;
+    background: #F19D38;
+    color: #000000; 
 }
 
 .cool-section {
@@ -286,29 +292,28 @@
     color: #9e9e9e;
 }
 
-.location-episodes {
-    display: flex;
-    justify-content: space-between;
-    margin: 0.5rem 0;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-}
-
-.cool-locations-container {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .cool-episodes-container {
     width: 100%;
     height: 50%;
+    margin-left: 1rem;
+    overflow: scroll;
+    margin-top: 0.2rem;
+    margin-bottom: 4rem;
+}
+
+.cool-date-created {
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+}
+
+.cool-date-created p {
+    color: #9E9E9E;
+    font-family: Helvetica, sans-serif;
+}
+
+#EpisodesOf {
+    margin: 1rem;
 }
 
 @media screen and (max-width: 768px) {

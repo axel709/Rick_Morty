@@ -138,6 +138,8 @@ function popCharacter(button) {
     const status = card.querySelector('.status').innerHTML;
     const firstSeen = card.querySelector('.sec3 a').textContent;
     const lastSeen = card.querySelector('.sec2 a').textContent;
+    const coolEpisodeContainer = document.getElementById('cool-episodes-container');
+    const coolEpisode = document.getElementById('cool-episodes');
 
     const modal = document.querySelector('.modal');
     const modelName = document.getElementById('cool-name');
@@ -145,6 +147,8 @@ function popCharacter(button) {
     const firstSeenLocation = document.getElementById('cool-first-seen');
     const lastSeenLocation = document.getElementById('cool-last-seen');
     const coolID = document.getElementById('cool-id');
+    const episodesOf = document.getElementById('EpisodesOf');
+    const dateCreated = document.getElementById('date-created');
 
     document.querySelector('.modal img').src = img.src;
     document.querySelector('.modal img').alt = img.alt;
@@ -154,11 +158,37 @@ function popCharacter(button) {
     firstSeenLocation.textContent = firstSeen;
     lastSeenLocation.textContent = lastSeen;
     coolID.textContent = `ID: ${id}`;
+    episodesOf.textContent = `Episodes of ${name}`;
+
+
+    fetch(`https://rickandmortyapi.com/api/character/${id}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const date = new Date(data.created);
+            const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+            dateCreated.textContent = `Date created: ${formattedDate}`;
+
+            data.episode.forEach(episode => {
+                const episodeID = episode.replace('https://rickandmortyapi.com/api/episode/', '');
+                const episodeP = document.createElement('p');
+
+                episodeP.textContent = `Episode ${episodeID}`;
+
+                coolEpisode.appendChild(episodeP);
+            });
+        });
 
 
     modal.showModal();
 }
 
 function closeModalWindow() {
+    document.getElementById('date-created').textContent = '';
+    document.getElementById('cool-episodes').innerHTML = '';
     modal.close();
 }
