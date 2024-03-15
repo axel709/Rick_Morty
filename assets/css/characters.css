@@ -230,8 +230,8 @@
 }
 
 .modal .closeModal {
-    width: 70%;
-    margin: 0.5rem auto;
+    width: 80%;
+    margin: 0 auto 1.5rem auto;
     padding: 1rem;
     background: transparent;
     color: #fff;
@@ -311,6 +311,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 0.5rem;
 }
 
 .cool-date-created p {
