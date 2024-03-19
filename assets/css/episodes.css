@@ -57,10 +57,12 @@
 }
 
 .mid-cont {
-    flex: 1;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 600px;
+    overflow-y: scroll;
 }
 
 .episode-title {
