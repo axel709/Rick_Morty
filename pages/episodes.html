@@ -41,33 +41,27 @@
 
 
     <div class="all-episodes">
-
         <template>
-
             <div class="episode-container">
-
                 <div class="content">
-
                     <div class="upper-cont">
                         <h2 class="episode-title">Name: Loading...</h2>
                         <p class="episode-season">Episode: Loading...</p>
                     </div>
-
                     <div class="mid-cont">
-                        <!-- character list -->
-                    </div>
-
-                    <div class="lower-cont">
                         <button class="character-button">Load Characters</button>
+                    </div>
+                    <div class="lower-cont">
                         <p class="episode-date">Created: Loading...</p>
                     </div>
-
                 </div>
-
             </div>
-
         </template>
+    </div>
 
+    <div class="pagination">
+        <button onclick="handlePaginationClick(currentPage - 1)">Previous</button>
+        <button onclick="handlePaginationClick(currentPage + 1)">Next</button>
     </div>
 
     <footer>

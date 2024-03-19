@@ -97,3 +97,29 @@
     font-size: 1rem;
     margin: 0.5rem 0;
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.pagination button {
+    background: #3C3E44;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.pagination button:active {
+    background: #F19D38;
+}
+
+.pagination button:hover {
+    background: #F19D38;
+}
