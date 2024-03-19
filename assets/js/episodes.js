@@ -1,9 +1,8 @@
-// Select the template and clone it
 const template = document.querySelector('template');
 const clone = document.importNode(template.content, true);
+const episodeUrl2 = 'https://rickandmortyapi.com/api/episode?page=1';
 
-// Fetch data from the API
-fetch(episodeUrl)
+fetch(episodeUrl2)
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -12,22 +11,19 @@ fetch(episodeUrl)
     })
     .then(data => {
         const results = data.results;
-
-        // Iterate over each episode data
+        console.log(results);
         results.forEach(episode => {
-            // Clone the template for each episode
+
             const episodeClone = document.importNode(clone, true);
 
-            // Update the cloned template with episode data
             const titleElement = episodeClone.querySelector('.episode-title');
             const seasonElement = episodeClone.querySelector('.episode-season');
             const dateElement = episodeClone.querySelector('.episode-date');
 
-            titleElement.textContent = `Name: ${episode.name}`;
-            seasonElement.textContent = `Episode: ${episode.episode}`;
-            dateElement.textContent = `Created: ${episode.created}`;
+            titleElement.textContent = episode.name;
+            seasonElement.textContent = episode.episode;
+            dateElement.textContent = `Uploaded on ${episode.air_date}`;
 
-            // Append the updated cloned template to the document
             document.querySelector('.all-episodes').appendChild(episodeClone);
         });
     })
