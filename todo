@@ -1,6 +1,18 @@
-TODO: Responsiveness
-TODO: Fetch episodes and locations
+**[+] Search Bar:**
+  *Allow users to search for characters, episodes, and locations. Implement a responsive search feature that provides real-time results as the user types.*
 
-TODO: Make a display for the characters, episodes and locations (WORKING ON IT + Need to add to change the image and text before showing..)
+**[+] Filter Bar:**
+  *Enhance user experience by implementing a versatile filter bar. Enable filtering options such as species, status, name (ascending or descending), and other relevant criteria.*
 
-TODO: Character, Episode, Location searchBar
+**[+] Character Page:**  
+  *Ensure Responsiveness across various devices and screen sizes to provide a seamless user experience.*
+
+  *Implement a visually appealing layout for character profiles. Include detailed information such as character image, name, species, status, and any additional relevant data.*
+
+**[+] Episode Page:**  
+  *Improve the visual presentation of episode containers for better readability and aesthetic appeal.*
+
+  *Enhance the functionality of the episode page by dynamically loading and displaying character information, including images, names, species, and statuses.*
+
+**[+] Location Page:**  
+  *Develop engaging content for the location page to provide users with valuable information about different settings within the series. Include descriptions, images, and any other relevant details to enrich the user experience.*
