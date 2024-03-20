@@ -123,10 +123,17 @@ function loadCharacters(container) {
 
                         .then(data => {
                             const characterName = data.name;
+                            const characterStatus = data.status;
+                            const characterSpecies = data.species;
+                            const characterImage = data.image;
+
+                            console.log(characterName, characterStatus, characterSpecies, characterImage)
+
                             const characterItem = document.createElement('p');
                             characterItem.textContent = characterName;
                             characterItem.style.padding = '0.5rem';
                             characterListDiv.appendChild(characterItem);
+
                             characterListDiv.style.overflowY = 'scroll';
                             characterListDiv.style.height = '100%';
                             characterListDiv.style.textAlign = 'center';
