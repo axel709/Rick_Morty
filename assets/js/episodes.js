@@ -19,7 +19,6 @@ fetch(episodeUrl2)
     })
     .then(data => {
         const results = data.results;
-        console.log(results);
         results.forEach(episode => {
             const episodeClone = document.importNode(clone, true);
             const episodeContainer = episodeClone.querySelector('.episode-container');
@@ -108,10 +107,8 @@ function loadCharacters(container) {
                 const characters = data.characters;
                 const midCont = episodeContainer.querySelector('.mid-cont');
 
-                // Remove the button
                 container.remove();
 
-                // Create a div to hold the character list
                 const characterListDiv = document.createElement('div');
                 characterListDiv.classList.add('character-list');
 
@@ -128,14 +125,18 @@ function loadCharacters(container) {
                             const characterName = data.name;
                             const characterItem = document.createElement('p');
                             characterItem.textContent = characterName;
+                            characterItem.style.padding = '0.5rem';
                             characterListDiv.appendChild(characterItem);
+                            characterListDiv.style.overflowY = 'scroll';
+                            characterListDiv.style.height = '100%';
+                            characterListDiv.style.textAlign = 'center';
                         })
 
                         .catch(error => {
                             console.error('Error fetching data:', error);
                         });
                 });
-                
+
                 midCont.appendChild(characterListDiv);
                 midCont.parentElement.parentElement.style.height = '60vh';
             
