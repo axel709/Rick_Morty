@@ -6,7 +6,7 @@ This website, Rick and Morty Explorer, offers fans a platform to explore the wor
 ## Credits
 
 - Website created and maintained by axel709.
-- Data sourced from the [Rick and Morty API](https://rickandmortyapi.com/).
+- Data sourced from the [Rick and Morty API](https://rickandmortyapi.com/api).
 
 ## License
 
