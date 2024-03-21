@@ -25,7 +25,7 @@
 .all-episodes {
     display: flex;
     justify-content: center;
-    align-items: center;
+
     flex-wrap: wrap;
     padding: 4rem 0 0 0;
 }
@@ -123,4 +123,63 @@
 
 .pagination button:hover {
     background: #F19D38;
+}
+
+.character-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    overflow-y: auto;
+    max-height: calc(100% - 2rem);
+}
+
+.character {
+    display: flex;
+    background-color: #3C3E44;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.image-container {
+    width: 30%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.character-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.character-container {
+    width: 70%;
+    padding: 0.5rem;
+    color: #FFFFFF;
+}
+
+.character-name {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.episode-char-status {
+    display: block;
+    font-size: 0.8rem;
+}
+
+.episode-char-icon {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.character-list .character:first-child {
+    margin-top: 1.5rem;
 }

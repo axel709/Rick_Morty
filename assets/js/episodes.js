@@ -102,7 +102,6 @@ function loadCharacters(container) {
                 }
                 return response.json();
             })
-
             .then(data => {
                 const characters = data.characters;
                 const midCont = episodeContainer.querySelector('.mid-cont');
@@ -120,25 +119,43 @@ function loadCharacters(container) {
                             }
                             return response.json();
                         })
-
                         .then(data => {
                             const characterName = data.name;
                             const characterStatus = data.status;
                             const characterSpecies = data.species;
                             const characterImage = data.image;
 
-                            console.log(characterName, characterStatus, characterSpecies, characterImage)
+                            const characterDiv = document.createElement('div');
+                            characterDiv.classList.add('character');
 
-                            const characterItem = document.createElement('p');
-                            characterItem.textContent = characterName;
-                            characterItem.style.padding = '0.5rem';
-                            characterListDiv.appendChild(characterItem);
+                            const imageContainer = document.createElement('div');
+                            imageContainer.classList.add('image-container');
+                            const characterImageElement = document.createElement('img');
+                            characterImageElement.src = characterImage;
+                            characterImageElement.alt = 'Character Image';
+                            characterImageElement.classList.add('character-image');
+                            imageContainer.appendChild(characterImageElement);
 
-                            characterListDiv.style.overflowY = 'scroll';
-                            characterListDiv.style.height = '100%';
-                            characterListDiv.style.textAlign = 'center';
+                            const characterContainer = document.createElement('div');
+                            characterContainer.classList.add('character-container');
+                            const characterNameElement = document.createElement('p');
+                            characterNameElement.classList.add('character-name');
+                            characterNameElement.textContent = characterName;
+                            const episodeCharStatus = document.createElement('span');
+                            episodeCharStatus.classList.add('episode-char-status');
+                            const statusIcon = document.createElement('span');
+                            statusIcon.classList.add('episode-char-icon');
+                            statusIcon.style.backgroundColor = characterStatus === 'Alive' ? '#2ecc71' : characterStatus === 'Dead' ? '#e74c3c' : '#95a5a6';
+                            episodeCharStatus.appendChild(statusIcon);
+                            episodeCharStatus.innerHTML += `${characterStatus} - ${characterSpecies}`;
+                            characterContainer.appendChild(characterNameElement);
+                            characterContainer.appendChild(episodeCharStatus);
+
+                            characterDiv.appendChild(imageContainer);
+                            characterDiv.appendChild(characterContainer);
+
+                            characterListDiv.appendChild(characterDiv);
                         })
-
                         .catch(error => {
                             console.error('Error fetching data:', error);
                         });
@@ -146,9 +163,7 @@ function loadCharacters(container) {
 
                 midCont.appendChild(characterListDiv);
                 midCont.parentElement.parentElement.style.height = '60vh';
-            
             })
-
             .catch(error => {
                 console.error('Error fetching data:', error);
             });
