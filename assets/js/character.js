@@ -122,15 +122,15 @@ modal.addEventListener('click', e => {
     }
 });
 
-function popChar(button) {
-    const img = button.querySelector('img');
-    const characterUrl = new URL(img.src);
-    const id = characterUrl.pathname.split('/').pop().replace('.jpeg', '');
-    console.log(`You clicked on ${id}`);
-}
-
 function popCharacter(button) {
-    const card = button.parentElement.parentElement.parentElement;
+    let card;
+    const imgCheck = button.querySelector('img');
+    if (!imgCheck) {
+        card = button.parentElement.parentElement.parentElement;
+    } else if (imgCheck) {
+        card = button.parentElement.parentElement;
+    }
+
     const img = card.querySelector('img');
     const characterUrl = new URL(img.src);
     const id = characterUrl.pathname.split('/').pop().replace('.jpeg', '');

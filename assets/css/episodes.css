@@ -25,7 +25,6 @@
 .all-episodes {
     display: flex;
     justify-content: center;
-
     flex-wrap: wrap;
     padding: 4rem 0 0 0;
 }
@@ -140,7 +139,7 @@
     overflow: hidden;
     width: 90%;
     margin: 0 auto 1rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid #282B32;
 }
 
 .image-container {
