@@ -23,7 +23,6 @@
         <nav class="nav-menu">
             <ul>
                 <li><a href="../pages/characters.html" draggable="false">Characters</a></li>
-                <li><a href="../pages/locations.html" draggable="false">Locations</a></li>
                 <li><a href="../pages/episodes.html" draggable="false">Episodes</a></li>
                 <li><a href="../index.html" class="start-link" draggable="false">Home</a></li>
             </ul>
@@ -40,29 +39,7 @@
     </main>
 
 
-    <div class="all-episodes">
-        <template>
-            <div class="episode-container">
-                <div class="content">
-                    <div class="upper-cont">
-                        <h2 class="episode-title">Name: Loading...</h2>
-                        <p class="episode-season">Episode: Loading...</p>
-                    </div>
-                    <div class="mid-cont">
-                        <button class="character-button" onclick="loadCharacters(this)">Load Characters</button>
-                    </div>
-                    <div class="lower-cont">
-                        <p class="episode-date">Created: Loading...</p>
-                    </div>
-                </div>
-            </div>
-        </template>
-    </div>
 
-    <div class="pagination">
-        <button onclick="handlePaginationClick(currentPage - 1)">Previous</button>
-        <button onclick="handlePaginationClick(currentPage + 1)">Next</button>
-    </div>
 
     <footer>
         <ul>
@@ -72,7 +49,7 @@
                 </a>
             </li>
             <li>
-                <a href="./locations.html">
+                <a href="#">
                     <span id="location-count">locations: LOADING...</span>
                 </a>
             </li>

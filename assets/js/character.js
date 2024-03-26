@@ -160,7 +160,6 @@ function popCharacter(button) {
     coolID.textContent = `ID: ${id}`;
     episodesOf.textContent = `Episodes of ${name}`;
 
-
     fetch(`https://rickandmortyapi.com/api/character/${id}`)
         .then(response => {
             if (!response.ok) {
