@@ -1,9 +1,9 @@
-.sectionS {
+section {
     position: relative;
     z-index: 2;
 }
 
-.sectionS h1 {
+section h1 {
     position: absolute;
     width: 100%;
     text-align: center;
@@ -14,171 +14,78 @@
     user-select: none;
 }
 
-.sectionB {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem 0 0 0;
-    color: white;
-}
-
-.all-episodes {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 4rem 0 0 0;
-}
-
-.episode-container {
-    width: 27vw;
-    height: 30vh;
-    background: #3C3E44;
-    margin: 1rem;
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.upper-cont,
-.lower-cont {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.mid-cont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 600px;
-    overflow-y: scroll;
-}
-
-.episode-title {
-    text-align: center;
-    font-size: 1.5rem;
-    margin: 0.5rem;
-    color: white;
-}
-
-.episode-season {
-    color: #9E9E9E;
-    font-size: 1rem;
-    margin: 0.5rem 0;
-}
-
-.character-button {
-    background: transparent;
-    border: 1px solid #F19D38;
-    color: white;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    cursor: pointer;
-    width: 50%;
-    margin: 0.5rem auto;
-}
-
-.character-button:hover {
-    background: #F19D38;
-    color: #000000;
-}
-
-.episode-date {
-    color: #9E9E9E;
-    font-size: 1rem;
-    margin: 0.5rem 0;
-}
-
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 0;
-}
-
-.pagination button {
-    background: #3C3E44;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-}
-
-.pagination button:active {
-    background: #F19D38;
-}
-
-.pagination button:hover {
-    background: #F19D38;
-}
-
-.character-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    overflow-y: auto;
-    max-height: calc(100% - 2rem);
-}
-
-.character {
-    display: flex;
-    background-color: #3C3E44;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    width: 90%;
-    margin: 0 auto 1rem;
-    border: 1px solid #282B32;
-}
-
-.image-container {
-    width: 30%;
-    flex-shrink: 0;
-    display: flex;
-    align-items: flex-end;
-}
-
-.character-image {
-    width: 100%;
+.showcase {
+    width: 100vw;
     height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.card1, .card2, .card3, .card4, .card5 {
+    width: 400px;
+    height: 500px;
+    background: #3C3E44;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardImgWrapper {
+    width: 400px;
+    height: 400px;
+
+}
+
+.cardImgWrapper img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
 }
 
-.character-container {
-    width: 70%;
-    padding: 0.5rem;
-    color: #FFFFFF;
+img {
+    filter: grayscale(30%);
+    user-select: none;
 }
 
-.character-name {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+.card1:hover img, .card2:hover img, .card3:hover img, .card4:hover img, .card5:hover img{
+    filter: grayscale(0%);
 }
 
-.episode-char-status {
-    display: block;
-    font-size: 0.8rem;
+.card1:hover, .card2:hover, .card3:hover, .card4:hover, .card5:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.episode-char-icon {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-right: 5px;
+.card:hover h2 {
+    color: #fff;
 }
 
-.character-list .character:first-child {
-    margin-top: 1.5rem;
+.card img, .card a {
+    -webkit-user-drag: none;
+    text-decoration: none;
+}
+
+.card h2 {
+    color: #ccc;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.cardContentWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
