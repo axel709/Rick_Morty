@@ -18,7 +18,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4rem 0 0 0;
     color: white;
 }
 
@@ -324,7 +323,25 @@
     margin: 1rem;
 }
 
-.search-bar {
+.input-search {
+    display: flex;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 40%;
+    margin: 2rem auto;
+    flex-grow: 1;
+    padding: 8px 10px;
+    border: none; 
+    outline: none;
+    color: #333;
+    font-size: 16px;
+    background-color: #fff;
+    padding: 0.7rem;
+}
+
+
+/* .search-bar {
     display: flex;
     border: 2px solid #fff;
     border-radius: 5px;
@@ -357,6 +374,9 @@
 .search-bar button:hover {
     background-color: #ee901e;
 }
+*/
+
+
 
 @media screen and (max-width: 768px) {
     .showcase {

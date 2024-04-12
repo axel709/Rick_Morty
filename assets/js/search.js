@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.search-bar');
     const showcase = document.querySelector('.showcase');
     const pagination = document.querySelector('.pagination');
-
+    
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         const searchTerm = document.querySelector('.search-bar input').value;
@@ -81,4 +81,3 @@ fetch('https://rickandmortyapi.com/api/episode')
     .then(data => {
         episodeCount.innerHTML = 'episodes: ' + data.info.count;
     });
-    
