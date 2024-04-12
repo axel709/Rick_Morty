@@ -324,6 +324,40 @@
     margin: 1rem;
 }
 
+.search-bar {
+    display: flex;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 40%;
+    margin: 1rem auto 0 auto;
+}
+
+.search-bar input[type="text"] {
+    flex-grow: 1;
+    padding: 8px 10px;
+    border: none; 
+    outline: none;
+    color: #333;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    border: none; 
+    outline: none; 
+    background-color: #F19D38; 
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #ee901e;
+}
+
 @media screen and (max-width: 768px) {
     .showcase {
         flex-direction: column;
