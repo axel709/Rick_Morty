@@ -340,6 +340,29 @@
     padding: 0.7rem;
 }
 
+.loading_screen {
+    width: 100vh;
+    height: 100vh;
+}
+
+.loading_img {
+    display: flex;
+    width: 25%;
+    height: 25%;
+    object-fit: cover;
+    margin: 50px auto 0 auto;
+    animation: rotation 6s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
 
 /* .search-bar {
     display: flex;

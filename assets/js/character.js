@@ -17,6 +17,7 @@ fetch(characterUrl2)
         }
         return response.json();
     })
+    
     .then(data => {
         const charactersData = data.results;
         const template = document.querySelector('template');
