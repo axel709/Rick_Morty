@@ -20,8 +20,8 @@ TODO List for RandM Project:
     - Allow users to update their profile
 
 5. Implement navigation between pages
-    - Create a navigation menu
-    - Add links to login, registration, character selection, and profile pages
+    - Update navigation menu
+    - Add links to login, registration and profile pages
 
 6. Add search bar and filter functionality
     - Implement a search bar to search for characters
@@ -32,7 +32,7 @@ TODO List for RandM Project:
     - Implement error handling for invalid inputs
     - Handle edge cases such as empty fields or duplicate usernames
 
-8. Document the project
-    - Write documentation for the codebase
-    - Provide instructions for setting up and running the application
-    - Include any additional information or considerations
+8. Convert API Data
+    - Transfer the data from the api to a database
+    - Make sure the Database updates every day at 12pm
+    (This will make the website faster because it doesn't need to send api requests every time you reload the page + searching won't give fetch ratelimit errors!)
